@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+nav {
+    display: flex;
+    background-color: lightskyblue;
+    padding: 20px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.fill{
+    height: 400px;
+    padding: 100px;
+    background-color: lightcoral;
+    margin-top: 50px;
+}
+
+.three-card{
+    background-color: lightgreen;
+    padding: 50px;
+    display: flex;;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
