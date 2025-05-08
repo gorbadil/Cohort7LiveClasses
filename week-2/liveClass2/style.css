@@ -32,6 +32,7 @@ section {
 /* Navbar */
 .header{
     position: fixed;
+    background-color: var(--bg-color);
     width: 100vw;
     top: 0;
     left: 0;
@@ -39,6 +40,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 10%;
+    z-index: 10;
 }
 
 .logo{
@@ -64,6 +66,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 6rem;
 }
 .home-img{
 
@@ -158,4 +161,190 @@ section {
     100%{
         width: 0;
     }
+}
+
+.social-links{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    font-size: 6rem;
+    margin-top: 2rem;
+    color: var(--main-color);
+}
+
+.social-links a:hover{
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    background-clip: text;
+    text-shadow: 0 0 1rem var(--main-color);
+    transition: all .3s;
+}
+
+/* About */
+.about {
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.about-img img{
+    width: 35vw;
+}
+
+.heading {
+    font-size: 4.5rem;
+    line-height: 1.5;
+    span{
+        color: var(--main-color);
+    }
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.about-content h3 {
+    font-size: 2.6rem;
+}
+.about-btn {
+    background-color: var(--main-color);
+    color: var(--secondary-bg-color);
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    border-radius: 4rem;
+    filter: drop-shadow(0 0 2rem var(--main-color));
+}
+.about-btn:hover {
+    filter: none;
+    color: var(--text-color);
+    transition: all .3s;
+}
+.about-img img {
+    animation: border-animate 30s infinite;
+    background: var(--main-color);
+    border: 3px solid var(--text-color);
+    border-radius: 30%   70%  53%  47% / 26% 46% 54% 74%;
+    filter: drop-shadow(0 0 10rem var(--main-color));
+}
+@keyframes border-animate{
+    0%,
+    100%{
+        border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+    }
+    10% {
+        border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+      }
+    
+      20% {
+        border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+      }
+    
+      30% {
+        border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+      }
+    
+      40% {
+        border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+      }
+    
+      50% {
+        border-radius: 100%;
+      }
+    
+      60% {
+        border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+      }
+    
+      70% {
+        border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+      }
+    
+      80% {
+        border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+      }
+    
+      90% {
+        border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+      }
+}
+
+.about-content p span {
+    color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--text-color),
+        var(--text-color)
+        );
+    background-clip: text;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    animation: animate-text 6s linear forwards;
+    animation-timeline: view();
+    animation-range: contain;
+    animation-range-end: 40vh;
+}
+
+@keyframes animate-text {
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+/* Services */
+.services {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15rem;
+}
+.services-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services-box{
+    flex: 1 1 30rem;
+    background-color: var(--secondary-bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    transition: all .3s;
+    border: 0.2rem solid transparent;
+}
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.services-box h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.services-box p {
+    font-size: 1.5rem;
+    margin: 1rem 0.3rem 3rem;
+    line-height: 1.5;
+}
+.services-btn {
+    background-color: var(--main-color);
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    color: var(--secondary-bg-color);
+    font-weight: 600;
+    transition: all .3s;
+}
+.services-box:hover {
+    border: 0.2rem solid var(--main-color);
+    transform: scale(1.05);
+}
+.services-box:hover .services-btn {
+    filter: drop-shadow(0 0 2rem var(--main-color));
 }
